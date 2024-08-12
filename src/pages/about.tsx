@@ -28,7 +28,7 @@ export default function About() {
         </div>
       </section>
 
-      <hr className="my-4 mx-9 sm:mx-0" />
+      <hr className="my-4 mx-24 sm:mx-0" />
 
       <section className="flex justify-around">
         <div className="flex items-stretch w-3/4 sm:w-1/2">
@@ -61,7 +61,7 @@ export default function About() {
         />
       </section>
 
-      <hr className="my-4 mx-9 sm:mx-0" />
+      <hr className="my-4 mx-24 sm:mx-0" />
 
       <section className="flex justify-around">
         <img
