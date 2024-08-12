@@ -37,8 +37,8 @@ export function Contact() {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" placeholder="Name of your project" />
+                  <Label htmlFor="name">Nome</Label>
+                  <Input id="name" placeholder="Nome" />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="empresa">Empresa</Label>
@@ -51,7 +51,7 @@ export function Contact() {
                       <SelectValue placeholder="Selecione" />
                     </SelectTrigger>
                     <SelectContent position="popper">
-                      <SelectItem value="next">Vaga de emprego</SelectItem>
+                      <SelectItem value="next">Oferta de emprego</SelectItem>
                       <SelectItem value="sveltekit">Freelancer</SelectItem>
                       <SelectItem value="astro">Outros</SelectItem>
                     </SelectContent>
@@ -102,7 +102,7 @@ export function Contact() {
                 href="https://github.com/cibelebarbosa"
                 target="_blank"
               >
-                <FaSquareGithub size="1.5rem" />
+                <FaSquareGithub size="1.6rem" />
                 <p className="overflow-hidden text-ellipsis whitespace-nowrap">
                   GitHub: cibelebarbosa
                 </p>

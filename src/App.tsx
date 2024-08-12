@@ -4,6 +4,7 @@ import FooterCustom from "./components/custom/footercustom";
 import About from "./pages/about";
 import Home from "./pages/home";
 import { Contact } from "./pages/contact";
+import Maintenance from "./pages/maintenance";
 
 
 export function App() {
@@ -20,7 +21,7 @@ export function App() {
           ) : menuItem === 2 ? (
             <About />
           ) : menuItem === 3 ? (
-            <></>
+            <Maintenance></Maintenance>
           ) : (
             <Contact></Contact>
           )}
