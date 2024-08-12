@@ -10,11 +10,10 @@ enum MenuTypes {
 }
 
 type Props = {
-  setMenuItem: any
-}
+  setMenuItem: any;
+};
 
-export function AppBarCustom({setMenuItem}: Props) {
-
+export function AppBarCustom({ setMenuItem }: Props) {
   return (
     <>
       <Menubar className="bg-neutral-950 text-slate-50 border-none">
@@ -44,6 +43,7 @@ export function AppBarCustom({setMenuItem}: Props) {
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger
+            disabled
             onClick={() => setMenuItem(MenuTypes.projetos)}
             className="cursor-pointer"
           >

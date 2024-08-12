@@ -3,6 +3,8 @@ import { AppBarCustom } from "./components/custom/appbarcustom";
 import FooterCustom from "./components/custom/footercustom";
 import About from "./pages/about";
 import Home from "./pages/home";
+import { Contact } from "./pages/contact";
+
 
 export function App() {
   const [menuItem, setMenuItem] = useState<number>(1);
@@ -20,7 +22,7 @@ export function App() {
           ) : menuItem === 3 ? (
             <></>
           ) : (
-            <></>
+            <Contact></Contact>
           )}
         </main>
         <footer>
