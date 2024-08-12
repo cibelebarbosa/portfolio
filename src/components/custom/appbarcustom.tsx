@@ -32,7 +32,7 @@ export function AppBarCustom({ setMenuItem }: Props) {
           </Avatar>
           <div className="text-lg font-semibold self-center">Cibele Silva</div>
         </Menubar>
-        <Menubar className="bg-neutral-950 text-slate-50 border-none mb-3">
+        <Menubar className="shadow-sm shadow-slate-800 bg-neutral-950 text-slate-50 border-none mb-3">
           <MenubarMenu>
             <MenubarTrigger
               onClick={() => setMenuItem(MenuTypes.inicio)}
@@ -69,7 +69,7 @@ export function AppBarCustom({ setMenuItem }: Props) {
       </section>
 
       <section className="block sm:hidden ">
-        <Menubar className="bg-neutral-950 text-slate-50 border-none py-8 px-3">
+        <Menubar className="shadow-sm shadow-slate-800 bg-neutral-950 text-slate-50 border-none py-8 px-3">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary">

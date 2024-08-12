@@ -20,6 +20,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { BsLinkedin } from "react-icons/bs";
 import { FaSquareGithub } from "react-icons/fa6";
 import { CiAt } from "react-icons/ci";
+import { BiLogoGmail } from "react-icons/bi";
 
 export function Contact() {
   return (
@@ -105,6 +106,17 @@ export function Contact() {
                 <FaSquareGithub size="1.6rem" />
                 <p className="overflow-hidden text-ellipsis whitespace-nowrap">
                   GitHub: cibelebarbosa
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
+                href="mailto:cibele.barbosa.silvaa@gmail.com"
+              >
+                <BiLogoGmail size="1.6rem" />
+                <p className="overflow-hidden text-ellipsis whitespace-nowrap">
+                  Gmail: cibele.barbosa.silvaa@gmail.com
                 </p>
               </a>
             </li>
