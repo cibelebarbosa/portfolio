@@ -1,18 +1,24 @@
-import { Card, CardContent } from "@/components/ui/card";
-import ProgrammingBG from "../assets/programming-bg.jpg";
+import AvatarPessoal from "../assets/avatar.png";
 import ProfessionalIcon from "../assets/ilustracao-de-conceito-abstrato-de-frameworks-multiplataforma.png";
 import Education from "../assets/education.png";
+import { FaReact } from "react-icons/fa";
+import { RiAngularjsLine } from "react-icons/ri";
+import { FaNodeJs } from "react-icons/fa";
+import { RiJavascriptLine } from "react-icons/ri";
+import { SiDotnet } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { DiPostgresql } from "react-icons/di";
+import { FaGitAlt } from "react-icons/fa";
+import { TbBrandTypescript } from "react-icons/tb";
 
 export default function About() {
   return (
     <div className="py-4 sm:py-9">
-      <section className="flex justify-around">
-        <Card className="w-1/4 bg-zinc-950 text-slate-50 hidden sm:flex">
-          <CardContent className="p-3">
-            <img src={ProgrammingBG} alt="ProgrammingBG" />
-          </CardContent>
-        </Card>
-        <div className="flex items-stretch w-3/4 sm:w-1/2">
+      <section className="flex justify-around ">
+        <div className="hidden sm:flex w-1/4">
+          <img src={AvatarPessoal} alt="ProgrammingBG" />
+        </div>
+        <div className="flex items-stretch w-3/4 sm:w-1/2 self-center">
           <div>
             <h3 className="text-center md:text-left text-2xl font-semibold mb-3">
               É um prazer conhece-lo (a):
@@ -48,8 +54,8 @@ export default function About() {
             <p className="w-full text-justify tracking-widest">
               Além da minha formação acadêmica, obtive a certificação de AWS
               Certified Cloud Practitioner em 2022. Também completei cursos
-              especializados em Angular, React e UI/UX, e em Gerenciamento Ágil /
-              Metodologia Agile.
+              especializados em Angular, React e UI/UX, e em Gerenciamento Ágil
+              / Metodologia Agile.
             </p>
           </div>
         </div>
@@ -134,6 +140,18 @@ export default function About() {
             </section>
           </div>
         </div>
+      </section>
+      <hr className="my-4 mx-24 sm:mx-0" />
+      <section>
+      <FaReact />
+      <RiAngularjsLine />
+      <FaNodeJs />
+      <RiJavascriptLine />
+      <SiDotnet />
+      <SiMysql />
+      <DiPostgresql />
+      <FaGitAlt />
+      <TbBrandTypescript />
       </section>
     </div>
   );

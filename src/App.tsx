@@ -11,11 +11,11 @@ export function App() {
   const [menuItem, setMenuItem] = useState<number>(1);
   return (
     <>
+      <div className="flex flex-col h-screen justify-between">
       <header>
         <AppBarCustom setMenuItem={setMenuItem} />
       </header>
-      <div className="flex flex-col h-screen justify-between">
-        <main>
+        <main className="flex-grow">
           {menuItem === 1 ? (
             <Home setMenuItem={setMenuItem} />
           ) : menuItem === 2 ? (
