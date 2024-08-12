@@ -12,7 +12,7 @@ export default function About() {
             <img src={ProgrammingBG} alt="ProgrammingBG" />
           </CardContent>
         </Card>
-        <div className="flex items-stretch w-1/2">
+        <div className="flex items-stretch w-3/4 sm:w-1/2">
           <div>
             <h3 className="text-center md:text-left text-2xl font-semibold mb-3">
               É um prazer conhece-lo (a):
@@ -31,7 +31,7 @@ export default function About() {
       <hr className="my-4 mx-9 sm:mx-0" />
 
       <section className="flex justify-around">
-        <div className="flex items-stretch w-1/2">
+        <div className="flex items-stretch w-3/4 sm:w-1/2">
           <div>
             <h3 className="text-center md:text-left text-2xl font-semibold mb-3">
               Formação:
@@ -63,7 +63,7 @@ export default function About() {
           alt="ProgrammingBG"
           className="h-60 hidden sm:flex"
         />
-        <div className="flex items-stretch w-1/2">
+        <div className="flex items-stretch w-3/4 sm:w-1/2">
           <div>
             <h3 className="text-center md:text-left text-2xl font-semibold mb-3">
               Carreira:
