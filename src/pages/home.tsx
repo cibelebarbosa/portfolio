@@ -10,7 +10,7 @@ type Props = {
 export default function Home({ setMenuItem }: Props) {
   return (
     <>
-      <section className="p-2 scroll-m-20">
+      <section className="p-7 scroll-m-20">
         <h3 className="text-center md:text-left text-2xl font-semibold">
           Bem-vindo ao meu portfólio!
         </h3>
