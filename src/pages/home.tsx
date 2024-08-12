@@ -25,7 +25,7 @@ export default function Home({ setMenuItem }: Props) {
             </blockquote>
           </CardContent>
         </Card>
-        <div className="w-3/5 md:w-1/2 text-slate-50">
+        <div className="w-3/4 md:w-1/2 text-slate-50">
           <p className="leading-9 text-justify text-lg font-medium">
             Neste espaço, vou compartilhar um pouco sobre minha trajetória
             profissional e minha experiência. Aqui, você encontrará detalhes
