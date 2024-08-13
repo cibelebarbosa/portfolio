@@ -151,7 +151,7 @@ export default function About() {
               <h3 className="text-center md:text-left text-2xl font-semibold mb-3">
                 Minhas principais habilidades:
               </h3>
-              <ul className="list-disc text-xl w-full text-justify tracking-widest">
+              <ul className="list-disc text-md w-full text-justify tracking-widest">
                 <li>
                   <span className="font-bold">Desenvolvimento FullStack:</span>{" "}
                   Experiência sólida em HTML, CSS, JavaScript e TypeScript.

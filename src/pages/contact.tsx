@@ -20,7 +20,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { BsLinkedin } from "react-icons/bs";
 import { FaSquareGithub } from "react-icons/fa6";
 import { CiAt } from "react-icons/ci";
-import { BiLogoGmail } from "react-icons/bi";
+import { PiMicrosoftOutlookLogoLight } from "react-icons/pi";
+
 
 export function Contact() {
   return (
@@ -114,7 +115,7 @@ export function Contact() {
                 className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
                 href="mailto:cibelesilva.dev@outlook.com"
               >
-                <BiLogoGmail size="1.6rem" />
+                <PiMicrosoftOutlookLogoLight  size="1.6rem" />
                 <p className="overflow-hidden text-ellipsis whitespace-nowrap">
                   E-mail: cibelesilva.dev@outlook.com
                 </p>
