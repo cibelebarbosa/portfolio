@@ -10,6 +10,7 @@ import { SiMysql } from "react-icons/si";
 import { DiPostgresql } from "react-icons/di";
 import { FaGitAlt } from "react-icons/fa";
 import { TbBrandTypescript } from "react-icons/tb";
+import { GiStarMedal } from "react-icons/gi";
 
 export default function About() {
   return (
@@ -34,10 +35,10 @@ export default function About() {
         </div>
       </section>
 
-      <hr className="my-4 mx-24 sm:mx-0" />
+      <hr className="my-4 mx-24 sm:mx-10" />
 
       <section className="flex justify-around">
-        <div className="flex items-stretch w-3/4 sm:w-1/2">
+        <div className="flex items-stretch w-3/4 sm:w-1/2 self-center">
           <div>
             <h3 className="text-center md:text-left text-2xl font-semibold mb-3">
               Formação:
@@ -60,20 +61,18 @@ export default function About() {
           </div>
         </div>
 
-        <img
-          src={Education}
-          alt="ProgrammingBG"
-          className="h-60 hidden sm:flex"
-        />
+        <div className="h-80 hidden sm:flex self-center">
+          <img src={Education} alt="ProgrammingBG" />
+        </div>
       </section>
 
-      <hr className="my-4 mx-24 sm:mx-0" />
+      <hr className="my-4 mx-24 sm:mx-10" />
 
       <section className="flex justify-around">
         <img
           src={ProfessionalIcon}
           alt="ProgrammingBG"
-          className="h-60 hidden sm:flex"
+          className="h-80 hidden sm:flex"
         />
         <div className="flex items-stretch w-3/4 sm:w-1/2">
           <div>
@@ -141,17 +140,59 @@ export default function About() {
           </div>
         </div>
       </section>
-      <hr className="my-4 mx-24 sm:mx-0" />
-      <section>
-      <FaReact />
-      <RiAngularjsLine />
-      <FaNodeJs />
-      <RiJavascriptLine />
-      <SiDotnet />
-      <SiMysql />
-      <DiPostgresql />
-      <FaGitAlt />
-      <TbBrandTypescript />
+
+      <hr className="my-4 mx-24 sm:mx-10" />
+
+      <section className="flex justify-around">
+        <div className="flex items-stretch w-3/4 sm:w-1/2 self-center">
+          <div>
+            <div>
+              <h3 className="text-center md:text-left text-2xl font-semibold mb-3">
+                Minhas principais habilidades:
+              </h3>
+              <ul className="list-disc text-xl w-full text-justify tracking-widest">
+                <li>
+                  <span className="font-bold">Desenvolvimento FullStack:</span>{" "}
+                  Experiência sólida em HTML, CSS, JavaScript e TypeScript.
+                </li>
+                <li>
+                  <span className="font-bold">Frameworks Front-End:</span>{" "}
+                  Proficiência em Angular e ReactJS.
+                </li>
+                <li>
+                  <span className="font-bold">Desenvolvimento Back-End:</span>{" "}
+                  Competente em NodeJS, Java e C#.
+                </li>
+                <li>
+                  <span className="font-bold">Bancos de Dados:</span>{" "}
+                  Experiência com MySQL e PostgreSQL.
+                </li>
+                <li>
+                  <span className="font-bold">Tecnologias e Ferramentas:</span>{" "}
+                  Conhecimento em GraphQL, Jasmine Framework e Git.
+                </li>
+                <li>
+                  <span className="font-bold">Metodologias Ágeis:</span>{" "}
+                  Experiência em Scrum.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="w-1/4 self-center">
+          <GiStarMedal size="200" />
+        </div>
+      </section>
+      <section className="flex justify-around p-9 border-y-4 mt-10">
+        <FaReact size="3rem" />
+        <RiAngularjsLine size="3rem" />
+        <FaNodeJs size="3rem" />
+        <RiJavascriptLine size="3rem" />
+        <SiDotnet size="3rem" />
+        <SiMysql size="3rem" />
+        <DiPostgresql size="3rem" />
+        <FaGitAlt size="3rem" />
+        <TbBrandTypescript size="3rem" />
       </section>
     </div>
   );
