@@ -10,7 +10,7 @@ type Props = {
 export default function Home({ setMenuItem }: Props) {
   return (
     <>
-      <section className="flex justify-around py-12">
+      <section className="flex justify-around py-12 px-12 lg:px- xl:96">
         <div className="hidden sm:flex w-1/3 h-80">
           <img src={AvatarPessoal} alt="ProgrammingBG" />
         </div>

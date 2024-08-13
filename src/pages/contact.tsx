@@ -112,11 +112,11 @@ export function Contact() {
             <li>
               <a
                 className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
-                href="mailto:cibele.barbosa.silvaa@gmail.com"
+                href="mailto:cibelesilva.dev@outlook.com"
               >
                 <BiLogoGmail size="1.6rem" />
                 <p className="overflow-hidden text-ellipsis whitespace-nowrap">
-                  Gmail: cibele.barbosa.silvaa@gmail.com
+                  E-mail: cibelesilva.dev@outlook.com
                 </p>
               </a>
             </li>
