@@ -1,6 +1,6 @@
 export default function FooterCustom() {
   return (
-    <footer className="bg-neutral-950 text-slate-50 rounded-lg shadow m-4 dark:bg-gray-800">
+    <footer className="shadow-sm shadow-slate-800 bg-slate-950 rounded-lg m-4 justify-center">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2024{" "}

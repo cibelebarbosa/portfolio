@@ -1,6 +1,6 @@
 import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Logo from "../../assets/logo-portifolio1.png";
+import Logo from "../../assets/logo-portifolio.png";
 import {
   DropdownMenu,
   DropdownMenuContent,

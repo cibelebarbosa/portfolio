@@ -1,4 +1,4 @@
-import MaintenanceImg from "../assets/maintenance.png";
+import { GrVmMaintenance } from "react-icons/gr";
 
 export default function Maintenance() {
   return (
@@ -8,7 +8,7 @@ export default function Maintenance() {
           Oops... a página selecionada encontra-se em manutenção.
         </h1>
         <div className="flex justify-center">
-          <img src={MaintenanceImg} alt="ProgrammingBG" className="w-2/3" />
+          <GrVmMaintenance size="15rem"/>{" "}
         </div>
       </section>
     </>
