@@ -15,6 +15,7 @@ import { GiStarMedal } from "react-icons/gi";
 export default function About() {
   return (
     <div className="py-4 sm:py-9">
+      <div className="px-1 lg:px-60 xl:96">
       <section className="flex justify-around ">
         <div className="hidden sm:flex w-1/4">
           <img src={AvatarPessoal} alt="ProgrammingBG" />
@@ -183,7 +184,9 @@ export default function About() {
           <GiStarMedal size="200" />
         </div>
       </section>
-      <section className="flex justify-around p-9 border-y-4 mt-10">
+      <hr className="my-4 mx-24 sm:mx-10 mt-12" />
+      <section className="flex justify-around py-6 px-12 mt-3">
+        
         <FaReact size="3rem" />
         <RiAngularjsLine size="3rem" />
         <FaNodeJs size="3rem" />
@@ -194,6 +197,7 @@ export default function About() {
         <FaGitAlt size="3rem" />
         <TbBrandTypescript size="3rem" />
       </section>
+      </div>
     </div>
   );
 }
