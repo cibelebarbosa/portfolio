@@ -1,6 +1,6 @@
 import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Logo from "../../assets/logo-portfolio.png";
+import Logo from "../../assets/logo-portifolio1.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,18 +25,22 @@ export function AppBarCustom({ setMenuItem }: Props) {
   return (
     <>
       <section className="hidden sm:block">
-        <Menubar className="flex items-stretch bg-neutral-950 text-slate-50 border-none py-8">
-          <Avatar className="self-center">
+        {/* <Menubar className="flex bg-slate-950 text-slate-50 border-none rounded-none py-8 justify-end ">
+          <div className="text-lg font-semibold self-center">
+            Cibele Silva / Full Stack Developer
+          </div>
+          <img src={Logo} className="w-14 opacity-80" />
+          <Avatar className="">
             <AvatarImage src={Logo} />
             <AvatarFallback>C</AvatarFallback>
           </Avatar>
-          <div className="text-lg font-semibold self-center">Cibele Silva</div>
-        </Menubar>
-        <Menubar className="shadow-sm shadow-slate-800 bg-neutral-950 text-slate-50 border-none mb-3">
+        </Menubar> */}
+
+        <Menubar className="p-9 shadow-sm shadow-slate-800 bg-slate-950 text-slate-50 border-none rounded-none mb-3">
           <MenubarMenu>
             <MenubarTrigger
               onClick={() => setMenuItem(MenuTypes.inicio)}
-              className="cursor-pointer"
+              className="cursor-pointer text-md"
             >
               Início
             </MenubarTrigger>
@@ -44,7 +48,7 @@ export function AppBarCustom({ setMenuItem }: Props) {
           <MenubarMenu>
             <MenubarTrigger
               onClick={() => setMenuItem(MenuTypes.sobre)}
-              className="cursor-pointer"
+              className="cursor-pointer text-nowrap text-md"
             >
               Sobre mim
             </MenubarTrigger>
@@ -52,7 +56,7 @@ export function AppBarCustom({ setMenuItem }: Props) {
           <MenubarMenu>
             <MenubarTrigger
               onClick={() => setMenuItem(MenuTypes.projetos)}
-              className="cursor-pointer"
+              className="cursor-pointer text-md"
             >
               Projetos
             </MenubarTrigger>
@@ -60,11 +64,17 @@ export function AppBarCustom({ setMenuItem }: Props) {
           <MenubarMenu>
             <MenubarTrigger
               onClick={() => setMenuItem(MenuTypes.contato)}
-              className="cursor-pointer"
+              className="cursor-pointer text-md"
             >
               Contato
             </MenubarTrigger>
           </MenubarMenu>
+          <div className="flex w-full items-stretch justify-end">
+            <div className="text-lg font-semibold self-center">
+              Full Stack Developer
+            </div>
+            <img src={Logo} className="w-14 opacity-80" />
+          </div>
         </Menubar>
       </section>
 
