@@ -79,10 +79,10 @@ export function AppBarCustom({ setMenuItem }: Props) {
       </section>
 
       <section className="block sm:hidden ">
-        <Menubar className="shadow-sm shadow-slate-800 bg-neutral-950 text-slate-50 border-none py-8 px-3">
+        <Menubar className="shadow-sm shadow-slate-800 bg-slate-950 text-slate-50 border-none rounded-none py-8 px-3">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="secondary">
+              <Button variant="default">
                 <IoMenu size="1.5rem" />
               </Button>
             </DropdownMenuTrigger>
