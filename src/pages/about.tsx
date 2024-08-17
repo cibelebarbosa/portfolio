@@ -14,8 +14,8 @@ import { TbDevicesCode } from "react-icons/tb";
 
 export default function About() {
   return (
-    <div className="py-4 sm:py-9 p-6">
-      <div className="px-1 lg:px-40 xl:96">
+    <div className="py-4 sm:py-9 sm:p-6">
+      <div className="sm:px-1 lg:px-40 xl:96">
         <section className="flex justify-around ">
           <div className="hidden sm:flex w-1/4">
             <img src={AvatarPessoal} alt="ProgrammingBG" />
@@ -149,7 +149,7 @@ export default function About() {
                 <h3 className="text-center md:text-left text-2xl font-semibold mb-3">
                   Minhas principais habilidades:
                 </h3>
-                <ul className="list-disc text-md w-full text-justify tracking-widest">
+                <ul className="list-disc w-full text-justify tracking-widest">
                   <li>
                     <span className="font-bold">
                       Desenvolvimento FullStack:
@@ -187,7 +187,7 @@ export default function About() {
           </div>
         </section>
         <hr className="my-4 mx-24 sm:mx-10 mt-12" />
-        <section className="flex justify-around py-6 px-12 mt-3">
+        <section className="flex justify-around py-6 px-12 mt-3 space-x-1">
           <FaReact size="3rem" />
           <RiAngularjsLine size="3rem" />
           <FaNodeJs size="3rem" />

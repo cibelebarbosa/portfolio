@@ -9,7 +9,7 @@ type Props = {
 export default function Home({ setMenuItem }: Props) {
   return (
     <>
-      <section className="flex flex-wrap sm:flex-nowrap justify-around p-8 md:p-12 lg:px-52 xl:96">
+      <section className="flex flex-wrap sm:flex-nowrap justify-around p-0 md:p-12 lg:px-52 xl:96">
         <div className="flex w-2/3 h-80">
           <img src={AvatarPessoal} alt="ProgrammingBG" />
         </div>
