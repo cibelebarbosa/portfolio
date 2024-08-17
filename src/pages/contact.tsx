@@ -22,12 +22,11 @@ import { FaSquareGithub } from "react-icons/fa6";
 import { CiAt } from "react-icons/ci";
 import { PiMicrosoftOutlookLogoLight } from "react-icons/pi";
 
-
 export function Contact() {
   return (
     <>
       <section className="flex flex-wrap justify-around py-9 space-y-9 md:space-y-0">
-        <Card className="w-3/4 md:w-2/4">
+        <Card className="w-3/4 md:w-2/4 bg-slate-100">
           <CardHeader>
             <CardTitle className="text-xl">Fale comigo!</CardTitle>
             <CardDescription className="text-xs">
@@ -114,7 +113,7 @@ export function Contact() {
                 className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
                 href="mailto:cibelesilva.dev@outlook.com"
               >
-                <PiMicrosoftOutlookLogoLight  size="1.6rem" />
+                <PiMicrosoftOutlookLogoLight size="1.6rem" />
                 <p className="overflow-hidden text-ellipsis whitespace-nowrap">
                   E-mail: cibelesilva.dev@outlook.com
                 </p>
@@ -123,53 +122,6 @@ export function Contact() {
           </ol>
         </div>
       </section>
-      {/* <section className="flex justify-around py-9">
-        <div className="w-3/4 sm:w-1/2 border rounded-md p-9">
-          <span className="flex items-center space-x-3 pb-9">
-            <CiAt size="1.5rem" />
-            <h3 className="text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">
-              Minhas redes:
-            </h3>
-          </span>
-          <ol className="list-none">
-            <li>
-              <a
-                className="flex space-x-2 sm:space-x-5 cursor-pointer"
-                href="https://www.linkedin.com/in/cibele-barbosa-da-silva/"
-                target="_blank"
-              >
-                <BsLinkedin size="1.5rem" />
-                <p className="overflow-hidden text-ellipsis whitespace-nowrap">
-                  Linkedin: Cibele Barbosa da Silva
-                </p>
-              </a>
-            </li>
-            <li>
-              <a
-                className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
-                href="https://github.com/cibelebarbosa"
-                target="_blank"
-              >
-                <FaSquareGithub size="1.6rem" />
-                <p className="overflow-hidden text-ellipsis whitespace-nowrap">
-                  GitHub: cibelebarbosa
-                </p>
-              </a>
-            </li>
-            <li>
-              <a
-                className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
-                href="mailto:cibelesilva.dev@outlook.com"
-              >
-                <PiMicrosoftOutlookLogoLight  size="1.6rem" />
-                <p className="overflow-hidden text-ellipsis whitespace-nowrap">
-                  E-mail: cibelesilva.dev@outlook.com
-                </p>
-              </a>
-            </li>
-          </ol>
-        </div>
-      </section> */}
     </>
   );
 }
