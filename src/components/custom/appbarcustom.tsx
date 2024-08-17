@@ -18,24 +18,13 @@ enum MenuTypes {
 }
 
 type Props = {
-  setMenuItem: any;
+  setMenuItem: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export function AppBarCustom({ setMenuItem }: Props) {
   return (
     <>
       <section className="hidden sm:block">
-        {/* <Menubar className="flex bg-slate-950 text-slate-50 border-none rounded-none py-8 justify-end ">
-          <div className="text-lg font-semibold self-center">
-            Cibele Silva / Full Stack Developer
-          </div>
-          <img src={Logo} className="w-14 opacity-80" />
-          <Avatar className="">
-            <AvatarImage src={Logo} />
-            <AvatarFallback>C</AvatarFallback>
-          </Avatar>
-        </Menubar> */}
-
         <Menubar className="p-9 shadow-sm shadow-slate-800 bg-slate-950 text-slate-50 border-none rounded-none mb-3">
           <MenubarMenu>
             <MenubarTrigger
@@ -70,25 +59,30 @@ export function AppBarCustom({ setMenuItem }: Props) {
             </MenubarTrigger>
           </MenubarMenu>
           <div className="flex w-full items-stretch justify-end">
-            <div className="text-lg font-semibold self-center">
+            <p
+              className="text-lg font-semibold self-center  cursor-pointer"
+              onClick={() => setMenuItem(MenuTypes.inicio)}
+            >
               Full Stack Developer
-            </div>
-            <img src={Logo} className="w-14 opacity-80" />
+            </p>
+            <img
+              src={Logo}
+              className="w-14 opacity-80  cursor-pointer"
+              onClick={() => setMenuItem(MenuTypes.inicio)}
+            />
           </div>
         </Menubar>
       </section>
 
       <section className="block sm:hidden ">
-        <Menubar className="shadow-sm shadow-slate-800 bg-neutral-950 text-slate-50 border-none py-8 px-3">
+        <Menubar className="shadow-sm shadow-slate-800 bg-slate-950 text-slate-50 border-none rounded-none py-8 px-3">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="secondary">
+              <Button variant="default">
                 <IoMenu size="1.5rem" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              {/* <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator /> */}
               <DropdownMenuItem
                 onClick={() => setMenuItem(MenuTypes.inicio)}
                 className="cursor-pointer"
