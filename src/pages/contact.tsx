@@ -27,7 +27,7 @@ import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 
 export function Contact() {
   const [emailHTML, setEmailHTML] = useState<string>("");
-  const [formValido, setFormValido] = useState<string>("enviado");
+  const [formValido, setFormValido] = useState<string>("");
 
   useEffect(() => {
     if (!emailHTML) return;
