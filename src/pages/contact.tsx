@@ -21,12 +21,82 @@ import { BsLinkedin } from "react-icons/bs";
 import { FaSquareGithub } from "react-icons/fa6";
 import { CiAt } from "react-icons/ci";
 import { PiMicrosoftOutlookLogoLight } from "react-icons/pi";
+import { useEffect, useState } from "react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 
 export function Contact() {
+  const [emailHTML, setEmailHTML] = useState<string>("");
+  const [formValido, setFormValido] = useState<string>("enviado");
+
+  useEffect(() => {
+    if (!emailHTML) return;
+
+    fetch("https://portfolio-server-afyf.onrender.com/api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ mensagem: emailHTML }),
+    })
+      .then(() => {
+        setFormValido("enviado");
+        setTimeout(() => {
+          setFormValido("");
+        }, 5000);
+      })
+      .catch(() =>
+        setFormValido(
+          "Erro ao enviar, por favor tente novamente ou entre em contato pelas minhas redes profissionais!"
+        )
+      );
+  }, [emailHTML]);
+
+  function handleSubmit(event: any) {
+    setFormValido("");
+    const campos = event.target;
+    event.preventDefault();
+    if (
+      !campos.tipo.value ||
+      !campos.email.value ||
+      !campos.empresa.value ||
+      !campos.nome.value ||
+      !campos.mensagem.value
+    ) {
+      setFormValido("invalido");
+      return;
+    }
+    setEmailHTML(`<h1>${campos.tipo.value}</h1>
+      <p>${campos.empresa.value}</p>
+      <p>${campos.email.value}</p>
+      <p>${campos.nome.value}</p>
+      <p>${campos.mensagem.value}</p>`);
+  }
   return (
     <>
       <section className="flex flex-wrap justify-around py-9 space-y-9 md:space-y-0">
         <Card className="w-3/4 md:w-2/4 bg-slate-100">
+          {formValido === "invalido" ? (
+            <div className="p-2">
+              <Alert variant="destructive">
+                <ExclamationTriangleIcon className="h-4 w-4" />
+                <AlertTitle>Formulário inválido!</AlertTitle>
+                <AlertDescription>
+                  Por favor preencha / verifique todos os campos.
+                </AlertDescription>
+              </Alert>
+            </div>
+          ) : formValido === "enviado" ? (
+            <div className="p-2">
+              <Alert className="border-teal-800 text-teal-800">
+                <AlertTitle>Enviado!</AlertTitle>
+                <AlertDescription>
+                  Retornarei seu contato o mais rápido possível. Obrigada!.
+                </AlertDescription>
+              </Alert>
+            </div>
+          ) : (
+            <></>
+          )}
+
           <CardHeader>
             <CardTitle className="text-xl">Fale comigo!</CardTitle>
             <CardDescription className="text-xs">
@@ -34,27 +104,33 @@ export function Contact() {
               profissionais a seguir.
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <form>
+          <form onSubmit={handleSubmit}>
+            <CardContent>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="name">Nome</Label>
-                  <Input id="name" placeholder="Nome" />
+                  <Input id="name" placeholder="Nome" name="nome" />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="empresa">Empresa</Label>
-                  <Input id="empresa" placeholder="Empresa" />
+                  <Input id="empresa" placeholder="Empresa" name="empresa" />
+                </div>
+                <div className="flex flex-col space-y-1.5">
+                  <Label htmlFor="email">E-mail</Label>
+                  <Input id="email" placeholder="E-mail" name="email" />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="framework">Tipo de contato</Label>
-                  <Select>
+                  <Select name="tipo">
                     <SelectTrigger id="framework">
                       <SelectValue placeholder="Selecione" />
                     </SelectTrigger>
                     <SelectContent position="popper">
-                      <SelectItem value="next">Oferta de emprego</SelectItem>
-                      <SelectItem value="sveltekit">Freelancer</SelectItem>
-                      <SelectItem value="astro">Outros</SelectItem>
+                      <SelectItem value="Oferta de emprego">
+                        Oferta de emprego
+                      </SelectItem>
+                      <SelectItem value="Freelancer">Freelancer</SelectItem>
+                      <SelectItem value="Outros">Outros</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -63,17 +139,18 @@ export function Contact() {
                   <Textarea
                     placeholder="Escreva sua mensagem."
                     id="message-2"
+                    name="mensagem"
                   />
                   <p className="text-sm text-muted-foreground">
                     Descreva o motivo do seu contato.
                   </p>
                 </div>
               </div>
-            </form>
-          </CardContent>
-          <CardFooter className="flex justify-center sm:justify-end">
-            <Button className="px-12 w-3/4 sm:w-2/4">Enviar</Button>
-          </CardFooter>
+            </CardContent>
+            <CardFooter className="flex justify-center sm:justify-end">
+              <Button className="px-12 w-3/4 sm:w-2/4">Enviar</Button>
+            </CardFooter>
+          </form>
         </Card>
 
         <div className="w-3/4 md:w-2/6 border rounded-md p-9 h-fit">
