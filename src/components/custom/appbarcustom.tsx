@@ -1,13 +1,14 @@
-import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Logo from "../../assets/logo-portifolio.png";
+import Logo from "../../assets/logo-remove-cut.png";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "../ui/button";
+} from "../ui/dropdown-menu";
 import { IoMenu } from "react-icons/io5";
 
 enum MenuTypes {
@@ -24,99 +25,76 @@ type Props = {
 export function AppBarCustom({ setMenuItem }: Props) {
   return (
     <>
-      <section className="hidden sm:block">
-        <Menubar className="p-9 shadow-sm shadow-slate-800 bg-slate-950 text-slate-50 border-none rounded-none mb-3">
-          <MenubarMenu>
-            <MenubarTrigger
+      <section className="text-sm hidden sm:flex justify-around p-3 shadow-sm shadow-red-950 bg-red-950 text-slate-50 border-none rounded-none">
+        <div className="">
+          <ul className="flex space-x-5 items-center font-semibold">
+            <li>
+              <img src={Logo} alt="" className="w-8" />
+            </li>
+            <li
+              className="cursor-pointer"
               onClick={() => setMenuItem(MenuTypes.inicio)}
-              className="cursor-pointer text-md"
             >
               Início
-            </MenubarTrigger>
-          </MenubarMenu>
-          <MenubarMenu>
-            <MenubarTrigger
-              onClick={() => setMenuItem(MenuTypes.sobre)}
-              className="cursor-pointer text-nowrap text-md"
-            >
-              Sobre mim
-            </MenubarTrigger>
-          </MenubarMenu>
-          <MenubarMenu>
-            <MenubarTrigger
+            </li>
+
+            <li
+              className="cursor-pointer"
               onClick={() => setMenuItem(MenuTypes.projetos)}
-              className="cursor-pointer text-md"
             >
               Projetos
-            </MenubarTrigger>
-          </MenubarMenu>
-          <MenubarMenu>
-            <MenubarTrigger
+            </li>
+            <li
+              className="cursor-pointer"
               onClick={() => setMenuItem(MenuTypes.contato)}
-              className="cursor-pointer text-md"
             >
               Contato
-            </MenubarTrigger>
-          </MenubarMenu>
-          <div className="flex w-full items-stretch justify-end">
-            <p
-              className="text-lg font-semibold self-center  cursor-pointer"
-              onClick={() => setMenuItem(MenuTypes.inicio)}
-            >
-              Full Stack Developer
-            </p>
-            <img
-              src={Logo}
-              className="w-14 opacity-80  cursor-pointer"
-              onClick={() => setMenuItem(MenuTypes.inicio)}
-            />
-          </div>
-        </Menubar>
+            </li>
+          </ul>
+        </div>
+        <div className="flex items-center">
+          <ul className="flex space-x-5">
+            <li>
+              <a
+                className="cursor-pointer"
+                href="https://www.linkedin.com/in/cibele-barbosa-da-silva/"
+                target="_blank"
+              >
+                <FaLinkedinIn size="1rem" />
+              </a>
+            </li>
+            <li>
+              <a
+                className="cursor-pointer"
+                href="https://github.com/cibelebarbosa"
+                target="_blank"
+              >
+                <FaGithub size="1rem" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section className="block sm:hidden ">
-        <Menubar className="shadow-sm shadow-slate-800 bg-slate-950 text-slate-50 border-none rounded-none py-8 px-3">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="default">
-                <IoMenu size="1.5rem" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem
-                onClick={() => setMenuItem(MenuTypes.inicio)}
-                className="cursor-pointer"
-              >
-                Início
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => setMenuItem(MenuTypes.sobre)}
-                className="cursor-pointer"
-              >
-                Sobre mim
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => setMenuItem(MenuTypes.projetos)}
-                className="cursor-pointer"
-              >
-                Projetos
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => setMenuItem(MenuTypes.contato)}
-                className="cursor-pointer"
-              >
-                Contato
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <div className="flex w-full justify-end  items-stretch">
-            <h1 className="self-center">Cibele B Silva</h1>
-            <Avatar className="">
-              <AvatarImage src={Logo} />
-              <AvatarFallback>C</AvatarFallback>
-            </Avatar>
-          </div>
-        </Menubar>
+      <section className="flex sm:hidden justify-between p-5 shadow-sm shadow-red-950 bg-red-950 text-slate-50 border-none rounded-none">
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <IoMenu size="1.5rem" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel onClick={() => setMenuItem(MenuTypes.inicio)}>
+              Inicio
+            </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem onClick={() => setMenuItem(MenuTypes.projetos)}>
+              Projetos
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setMenuItem(MenuTypes.contato)}>
+              Contato
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+        <img src={Logo} alt="" className="w-7" />
       </section>
     </>
   );

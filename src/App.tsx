@@ -17,7 +17,7 @@ export function App() {
       </header>
         <main className="flex-grow">
           {menuItem === 1 ? (
-            <Home setMenuItem={setMenuItem} />
+            <Home />
           ) : menuItem === 2 ? (
             <About />
           ) : menuItem === 3 ? (

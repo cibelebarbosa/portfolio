@@ -9,13 +9,6 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { BsLinkedin } from "react-icons/bs";
 import { FaSquareGithub } from "react-icons/fa6";
@@ -24,6 +17,7 @@ import { PiMicrosoftOutlookLogoLight } from "react-icons/pi";
 import { useEffect, useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
+import FotoPessoal from "../assets/foto-cartoon-cut.png";
 
 export function Contact() {
   const [emailHTML, setEmailHTML] = useState<string>("");
@@ -72,8 +66,61 @@ export function Contact() {
   }
   return (
     <>
+      <section>
+        <div className="block sm:flex justify-around items-center shadow-sm shadow-red-950">
+          <div className="sm:w-1/2 border rounded-md p-9 h-fit bg-red-950 animate-slideIn">
+            <span className="flex items-center space-x-3 pb-9">
+              <CiAt size="1.5rem" />
+              <h3 className="text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">
+                Minhas redes:
+              </h3>
+            </span>
+            <ol className="list-none">
+              <li>
+                <a
+                  className="flex space-x-2 sm:space-x-5 cursor-pointer"
+                  href="https://www.linkedin.com/in/cibele-barbosa-da-silva/"
+                  target="_blank"
+                >
+                  <BsLinkedin size="1.5rem" />
+                  <p className="overflow-hidden text-ellipsis whitespace-nowrap">
+                    Linkedin: Cibele Barbosa da Silva
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a
+                  className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
+                  href="https://github.com/cibelebarbosa"
+                  target="_blank"
+                >
+                  <FaSquareGithub size="1.6rem" />
+                  <p className="overflow-hidden text-ellipsis whitespace-nowrap">
+                    GitHub: cibelebarbosa
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a
+                  className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
+                  href="mailto:cibelesilva.dev@outlook.com"
+                >
+                  <PiMicrosoftOutlookLogoLight size="1.6rem" />
+                  <p className="overflow-hidden text-ellipsis whitespace-nowrap">
+                    E-mail: cibelesilva.dev@outlook.com
+                  </p>
+                </a>
+              </li>
+            </ol>
+          </div>
+          <div className="flex justify-center text-center">
+            <img src={FotoPessoal} alt="" className="w-72" />
+          </div>
+        </div>
+      </section>
+
       <section className="flex flex-wrap justify-around py-9 space-y-9 md:space-y-0">
-        <Card className="w-3/4 md:w-2/4 bg-slate-100">
+        <Card className="w-3/4 md:w-3/4 bg-zinc-100">
           {formValido === "invalido" ? (
             <div className="p-2">
               <Alert variant="destructive">
@@ -100,8 +147,8 @@ export function Contact() {
           <CardHeader>
             <CardTitle className="text-xl">Fale comigo!</CardTitle>
             <CardDescription className="text-xs">
-              Me mande uma mensagem ou entre em contato pelas minhas redes
-              profissionais a seguir.
+              Me mande uma mensagem e retornarei no seu e-mail o mais breve
+              possível.
             </CardDescription>
           </CardHeader>
           <form onSubmit={handleSubmit}>
@@ -111,29 +158,12 @@ export function Contact() {
                   <Label htmlFor="name">Nome</Label>
                   <Input id="name" placeholder="Nome" name="nome" />
                 </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Label htmlFor="empresa">Empresa</Label>
-                  <Input id="empresa" placeholder="Empresa" name="empresa" />
-                </div>
+
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="email">E-mail</Label>
                   <Input id="email" placeholder="E-mail" name="email" />
                 </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Label htmlFor="framework">Tipo de contato</Label>
-                  <Select name="tipo">
-                    <SelectTrigger id="framework">
-                      <SelectValue placeholder="Selecione" />
-                    </SelectTrigger>
-                    <SelectContent position="popper">
-                      <SelectItem value="Oferta de emprego">
-                        Oferta de emprego
-                      </SelectItem>
-                      <SelectItem value="Freelancer">Freelancer</SelectItem>
-                      <SelectItem value="Outros">Outros</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+
                 <div className="grid w-full gap-1.5">
                   <Label htmlFor="message-2">Sua mensagem</Label>
                   <Textarea
@@ -148,56 +178,12 @@ export function Contact() {
               </div>
             </CardContent>
             <CardFooter className="flex justify-center sm:justify-end">
-              <Button className="px-12 w-3/4 sm:w-2/4">Enviar</Button>
+              <Button className="px-12 w-3/4 sm:w-2/4 bg-red-950">
+                Enviar
+              </Button>
             </CardFooter>
           </form>
         </Card>
-
-        <div className="w-3/4 md:w-2/6 border rounded-md p-9 h-fit">
-          <span className="flex items-center space-x-3 pb-9">
-            <CiAt size="1.5rem" />
-            <h3 className="text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">
-              Minhas redes:
-            </h3>
-          </span>
-          <ol className="list-none">
-            <li>
-              <a
-                className="flex space-x-2 sm:space-x-5 cursor-pointer"
-                href="https://www.linkedin.com/in/cibele-barbosa-da-silva/"
-                target="_blank"
-              >
-                <BsLinkedin size="1.5rem" />
-                <p className="overflow-hidden text-ellipsis whitespace-nowrap">
-                  Linkedin: Cibele Barbosa da Silva
-                </p>
-              </a>
-            </li>
-            <li>
-              <a
-                className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
-                href="https://github.com/cibelebarbosa"
-                target="_blank"
-              >
-                <FaSquareGithub size="1.6rem" />
-                <p className="overflow-hidden text-ellipsis whitespace-nowrap">
-                  GitHub: cibelebarbosa
-                </p>
-              </a>
-            </li>
-            <li>
-              <a
-                className="flex space-x-2 sm:space-x-5 cursor-pointer mt-2"
-                href="mailto:cibelesilva.dev@outlook.com"
-              >
-                <PiMicrosoftOutlookLogoLight size="1.6rem" />
-                <p className="overflow-hidden text-ellipsis whitespace-nowrap">
-                  E-mail: cibelesilva.dev@outlook.com
-                </p>
-              </a>
-            </li>
-          </ol>
-        </div>
       </section>
     </>
   );
