@@ -59,7 +59,7 @@ export default function About() {
               Principais habilidades
             </AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc w-full text-justify tracking-widest">
+              <ul className="list-disc w-full tracking-widest">
                 <li>
                   <span className="font-bold"> Desenvolvimento FullStack:</span>{" "}
                   Experiência sólida em HTML, CSS, JavaScript e TypeScript.

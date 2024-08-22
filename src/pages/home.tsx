@@ -38,7 +38,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex justify-center items-stretch pt-12 text-red-950 px-24 ">
+      <section className="flex justify-center items-stretch pt-12 text-red-950 px-10 ">
         <div className="flex items-center"></div>
         <About />
       </section>
