@@ -16,7 +16,7 @@ export default function About() {
           Aqui uma breve descrição sobre quem sou.
         </h2>
         <Separator className="my-5" />
-        <Accordion type="single" collapsible className="w-full p-12">
+        <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-md">
               Um pouquinho sobre mim
