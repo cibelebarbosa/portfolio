@@ -66,9 +66,9 @@ export function Contact() {
   }
   return (
     <>
-      <section>
-        <div className="block sm:flex justify-around items-center shadow-sm shadow-red-950">
-          <div className="sm:w-1/2 border rounded-md p-9 h-fit bg-red-950 animate-slideIn">
+      <section className="shadow-sm shadow-red-950">
+        <div className="block sm:flex justify-around items-center  text-red-50 animate-slideIn">
+          <div className="sm:w-1/2 border rounded-md p-9 h-fit bg-red-950">
             <span className="flex items-center space-x-3 pb-9">
               <CiAt size="1.5rem" />
               <h3 className="text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">

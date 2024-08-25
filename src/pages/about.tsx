@@ -11,12 +11,12 @@ import { Separator } from "@/components/ui/separator";
 export default function About() {
   return (
     <>
-      <section id="#sobremim" className="w-full">
+      <section id="#sobremim" className="w-full sm:w-1/2 bg-red-950 text-red-50">
         <h2 className="text-center font-bold text-2xl">
           Aqui uma breve descrição sobre quem sou.
         </h2>
         <Separator className="my-5" />
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="">
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-md">
               Um pouquinho sobre mim
@@ -59,7 +59,7 @@ export default function About() {
               Principais habilidades
             </AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc w-full tracking-widest">
+              <ul className="list-disc tracking-widest">
                 <li>
                   <span className="font-bold"> Desenvolvimento FullStack:</span>{" "}
                   Experiência sólida em HTML, CSS, JavaScript e TypeScript.
