@@ -25,7 +25,7 @@ type Props = {
 export function AppBarCustom({ setMenuItem }: Props) {
   return (
     <>
-      <section className="text-sm hidden sm:flex justify-around p-3 shadow-sm shadow-red-950 bg-red-950 text-slate-50 border-none rounded-none">
+      <section className="text-md hidden sm:flex justify-around p-3 shadow-sm shadow-red-950 bg-gray-950 text-slate-50 border-none rounded-none">
         <div className="">
           <ul className="flex space-x-5 items-center font-semibold">
             <li>
@@ -60,7 +60,7 @@ export function AppBarCustom({ setMenuItem }: Props) {
                 href="https://www.linkedin.com/in/cibele-barbosa-da-silva/"
                 target="_blank"
               >
-                <FaLinkedinIn size="1rem" />
+                <FaLinkedinIn size="1.5rem" />
               </a>
             </li>
             <li>
@@ -69,7 +69,7 @@ export function AppBarCustom({ setMenuItem }: Props) {
                 href="https://github.com/cibelebarbosa"
                 target="_blank"
               >
-                <FaGithub size="1rem" />
+                <FaGithub size="1.5rem" />
               </a>
             </li>
           </ul>
