@@ -1,6 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-
 export default function TabAbout() {
   return (
     <>
@@ -103,39 +102,23 @@ export default function TabAbout() {
               </TabsList>
             </div>
             <TabsContent className="mt-0 " value="front">
-              O front end é a parte do site ou aplicativo que os usuários veem e
-              com a qual interagem, incluindo botões e layout. Utilizando
-              tecnologias modernas como React e Angular, eu desenvolvo
-              interfaces altamente funcionais e atraentes. React permite a
-              criação de componentes dinâmicos e reativos que se atualizam
-              rapidamente com base nas ações do usuário. Por outro lado, Angular
-              oferece uma abordagem estruturada para construir aplicações
-              robustas e completas. O objetivo é assegurar que a 'face' do
-              aplicativo seja intuitiva e envolvente para o usuário final.
+              O front end é a parte do site ou aplicativo visível para os
+              usuários, incluindo botões e layout. Utilizo tecnologias como
+              React e Angular para criar interfaces atraentes e intuitivas,
+              garantindo uma boa experiência para o usuário final.
             </TabsContent>
             <TabsContent className="mt-0" value="back">
-              O backend é a parte do site ou aplicativo que cuida da lógica e do
-              processamento de dados, como gerenciar informações e autenticar
-              usuários. Usando tecnologias modernas como Node.js e C#, eu
-              construo a infraestrutura que faz tudo funcionar nos bastidores.
-              Node.js permite criar sistemas rápidos e escaláveis com
-              JavaScript, enquanto C# é ideal para desenvolver aplicações
-              robustas e seguras. Essas tecnologias garantem que o backend seja
-              confiável e suporte uma experiência de usuário eficiente e sem
-              problemas.
+              O backend gerencia a lógica e o processamento de dados, como
+              autenticação de usuários. Utilizo Node.js e C# para criar sistemas
+              rápidos e seguros, garantindo um backend eficiente e confiável.
             </TabsContent>
             <TabsContent className="mt-0" value="data">
-              Em projetos de desenvolvimento, uma parte fundamental é o
-              gerenciamento de banco de dados, onde armazenamos e recuperamos
-              informações essenciais. Eu trabalho com a criação e integração de
-              bancos de dados, utilizando tecnologias como MySQL e PostgreSQL.
-              MySQL é conhecido por sua simplicidade e eficiência, ideal para
-              uma variedade de aplicações. PostgreSQL, por outro lado, oferece
-              recursos avançados e é excelente para aplicações que exigem um
-              banco de dados mais robusto e flexível. Embora eu não me aprofunde
-              nas complexidades da administração de bancos de dados, meu papel
-              inclui conectar esses bancos ao sistema e garantir que as
-              requisições e validações de dados sejam feitas de forma eficaz.
+              No desenvolvimento, gerencio bancos de dados, conectando-os ao
+              sistema e garantindo a eficácia das requisições e validações.
+              Embora não me aprofunde na administração de bancos, uso MySQL e
+              PostgreSQL conforme a necessidade. Meu papel inclui criar,
+              conectar esses bancos ao sistema e garantir que as requisições e
+              validações de dados sejam feitas de forma eficaz.
             </TabsContent>
           </Tabs>
         </div>
